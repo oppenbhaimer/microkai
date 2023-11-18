@@ -1,0 +1,7 @@
+/* Place custom css here. */
+
+img, video {
+    margin: auto;
+}
+
+.MathJax { font-size: 1em !important; }

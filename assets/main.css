@@ -1,0 +1,164 @@
+:root {
+  --p-base1: #272a30;
+  --p-base2: #26292C;
+  --p-base3: #2E323C;
+  --p-base4: #333842;
+  --p-base5: #4d5154;
+  --p-base6: #9ca0a4;
+  --p-base7: #b1b1b1;
+  --p-border: #a1b5b1;
+  --p-brown: #504945;
+  --p-white: #f8f8f0;
+  --p-grey: #8F908A;
+  --p-black: #000000;
+  --p-pink: #f92672;
+  --p-green: #a6e22e;
+  --p-aqua: #66d9ef;
+  --p-yellow: #e6db74;
+  --p-orange: #fd971f;
+  --p-purple: #ae81ff;
+  --p-red: #e95678;
+  --p-diff-add: #3d5213;
+  --p-diff-remove: #4a0f23;
+  --p-diff-change: #27406b;
+  --p-diff-text: #23324d;
+  
+  --c-text: var(--p-white);
+  --c-highlight: var(--p-green);
+  --c-link: var(--p-aqua);
+  --c-background: var(--p-base1);
+  --c-hl-background: var(--p-base4);
+}
+
+body {
+  font-family: "menlo", monospace;
+  margin: 0 auto;
+  color: var(--c-text);
+  background-color: var(--c-background);
+  width: 80ch;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.2;
+}
+
+div.label-nav {
+  background-color: var(--c-hl-background);
+  display: flex;
+  padding: 5px;
+}
+
+div.label-nav>nav {
+  flex-grow: 1;
+  text-align: right;
+  display: inline;
+}
+
+.post-nav {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background: var(--c-hl-background);
+  display: flex;
+}
+
+.bg-light {
+  background: var(--c-hl-background);
+}
+
+.pad-5 {
+  padding: 5px;
+}
+
+.text-grey {
+  color: var(--p-grey);
+}
+
+.text-green {
+  color: var(--p-green);
+}
+
+.list-item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#graphcomment {
+  margin-bottom: 20px;
+}
+
+.large {
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.flex-grow {
+  flex: 1;
+}
+
+.justify-end {
+  text-align: right;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+  color: var(--c-link);
+}
+
+a.nohl {
+  color: var(--c-text);
+}
+
+nav>a::before {
+  content: "[";
+}
+
+nav>a::after {
+  content: "]";
+}
+
+blockquote {
+  background: var(--c-hl-background);
+  padding: 10pt;
+}
+
+blockquote>cite {
+  display: block;
+  text-align: right;
+}
+
+blockquote>cite::before {
+  content: "- ";
+}
+
+ul {
+  list-style-type: "- ";
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 150%;
+}
+
+h3 {
+  font-size: 120%;
+}
+
+h1::before {
+  content: "# ";
+}
+
+h2::before {
+  content: "## ";
+}
+
+h3::before {
+  content: "### ";
+}

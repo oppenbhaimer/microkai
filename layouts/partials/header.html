@@ -1,0 +1,13 @@
+<header>
+  <div class="label-nav">
+    <b><a class="nohl" href="/">{{ site.Title }}</a></b>
+    {{ $url := .RelPermalink }}<!---->
+    {{ with site.Menus.main }}
+    <nav>
+      {{ range . }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    {{ end }}<!---->
+  </div>
+</header>

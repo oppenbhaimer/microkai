@@ -1,0 +1,16 @@
+<footer>
+  <div class="label-nav">
+    &copy; {{ now.Year }} {{ site.Title }}
+
+    {{ with $.Scratch.Get "social_list" }}
+    <nav>
+      {{ range . }}<!---->
+      <a
+        href="{{ if eq . `rss` }}{{ `index.xml` | absURL }}{{ else if eq . `mastodon` }}{{ index site.Params . }}{{ else }}https://{{ . }}.com/{{ if eq . `linkedin` }}in/{{ end }}{{ index site.Params . }}{{ end }}"
+        rel="{{ if eq . `rss` }}alternate{{ else }}me{{ end }}"
+      >{{.}}</a>
+      {{ end }}<!---->
+    </nav>
+    {{ end }}<!---->
+  </div>
+</footer>
