@@ -32,6 +32,7 @@
 
 body {
   font-family: "menlo", monospace;
+  font-size: 14px;
   margin: 0 auto;
   color: var(--c-text);
   background-color: var(--c-background);
