@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+{{ range .Data.Pages }}
+
+<section class="list-item">
+  <a class="nohl large" href="{{ .Permalink }}">{{ .Title }}</a>
+  <time class="text-grey">{{ .Date | time.Format ":date_medium" }}</time>
+  {{ if gt .Weight 0 }}
+  <span class="text-green"> Featured </span>
+  {{ end }}
+</section>
+{{ end }}
+
+{{ end }}
